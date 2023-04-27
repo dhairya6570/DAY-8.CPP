@@ -12,6 +12,7 @@ class Data{
 	char s_acc_no[20];
 	char s_phone[11];
 	char s_mail[30];
+	char s_amount[10];
 	
 	public:
 		
@@ -42,11 +43,35 @@ class Data{
 			cout<<"E-mail    	:"<<s_mail<<endl;
 						
 		}
+		
+		void money(){
+			
+			cout<<"Enter amount for withdraw money : ";
+			cin>>s_amount;
+			
+		}
+		
+		void amount(){
+			
+			cout<<"withdraw the money  : "<<s_amount<<endl;
+			
+		}
+		
+//		void balance (){
+//			
+//			cout<<200000-20000<<endl;
+//			
+//		}
+//		
+		
 };
 
 int main (){
 	
 	char login;
+	int money;
+	char s_amount;
+	
 	
 	Data obj;
 	
@@ -89,7 +114,49 @@ int main (){
 	obj.getter();
 	cout<<"-------------------------------------------------------------"<<endl;
 	
+	cout<<"Press [1] to Deposite the money:"<<endl;
+	cout<<"Press [2] to Transfer the money:"<<endl;
+	cout<<"Press [3] to Withdraw the money:"<<endl;
 	
+	cin>>money;
+	cout<<endl;
+	
+	//PAGE-5
+	
+	switch(money){
+		
+		case 1:
+			
+			cout<<"sorry , source is not responding , please try again later..."<<endl;
+			break;
+			
+		case 2:
+			
+			cout<<"sorry , source is not responding , please try again later..."<<endl;
+			break;	
+		
+		case 3:
+			
+			obj.money();
+			
+			break;
+			
+		default:
+			cout<<"please try again....";
+		
+		
+	}
+	
+	
+	cout<<endl<<endl;
+	
+	cout<<"---------------------------------------------------"<<endl;
+	obj.amount();
+	cout<<"---------------------------------------------------"<<endl;
+	
+	cout<<"Your Actual Amount is : 200000"<<endl<<endl;
+	cout<<"Congrates your Amount has withdraw successfully."<<endl<<endl;
+	cout<<"Your Account Balance is : "<<(200000-s_amount);
 	
 	
 	
